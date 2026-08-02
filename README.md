@@ -1,5 +1,5 @@
 # Vishnu Gamini — Portfolio
 
-Personal portfolio for Vishnu Gamini, an AI researcher, software engineer, and computer science student at USC.
+Personal portfolio for Vishnu Gamini, a computer science graduate student at USC building across AI and software engineering.
 
 Live at [vishnugamini.github.io](https://vishnugamini.github.io/).
