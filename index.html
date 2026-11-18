@@ -1,41 +1,177 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#080a08" />
-    <meta name="robots" content="index, follow" />
-    <title>Vishnu Gamini — AI + Software Engineering</title>
-    <meta name="description" content="Computer science graduate student at USC building across AI, backend systems, and software products—from model internals to production-ready experiences." />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f8f3" />
+    <title>Vishnu Gamini | AI and Software Engineering</title>
+    <meta name="description" content="Vishnu Gamini, USC computer science graduate student working on AI agents, search, and backend systems." />
     <link rel="canonical" href="https://vishnugamini.github.io/" />
     <link rel="icon" href="/favicon.png" />
+    <link rel="stylesheet" href="/styles.css" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://vishnugamini.github.io/" />
-    <meta property="og:title" content="Vishnu Gamini — AI + Software Engineering" />
-    <meta property="og:description" content="AI + Software Engineering · Applied Research · Production Systems" />
+    <meta property="og:title" content="Vishnu Gamini | AI and Software Engineering" />
+    <meta property="og:description" content="Projects and experience in AI agents, search, and backend systems." />
     <meta property="og:image" content="https://vishnugamini.github.io/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Vishnu Gamini, AI and Software Engineering" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Vishnu Gamini — AI + Software Engineering" />
-    <meta name="twitter:description" content="AI + Software Engineering · Applied Research · Production Systems" />
-    <meta name="twitter:image" content="https://vishnugamini.github.io/og.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <style>
-      :root {
-        --font-manrope: "Manrope", Arial, sans-serif;
-        --font-instrument: "Instrument Serif", Georgia, serif;
-        --font-dm-mono: "DM Mono", monospace;
-      }
-      html, body, #root { min-height: 100%; }
-    </style>
-    <script type="module" crossorigin src="/assets/index-CNGTHY7-.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Bjn5ca2Q.css">
   </head>
-  <body>
-    <div id="root"></div>
-    <noscript>This portfolio requires JavaScript for its interactive presentation.</noscript>
+  <body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="wordmark" href="#top">Vishnu Gamini</a>
+        <nav aria-label="Main navigation">
+          <a href="#work">Work</a>
+          <a href="#experience">Experience</a>
+          <a href="#about">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="wrap" tabindex="-1">
+      <div class="intro">
+        <div>
+          <h1>Vishnu Gamini</h1>
+          <p class="degree">M.S. student in Computer Science at USC</p>
+          <p class="intro-copy">I build AI agents, search systems, and the software that runs them. My research at USC focused on conversational models for human–robot interaction.</p>
+          <div class="links">
+            <a class="button" href="/Vishnu_Gamini_Resume.pdf">Résumé <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/vishnugamini">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/vishnu-gamini/">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <img class="portrait" src="/images/vishnu-hero.jpg" width="1350" height="1800" alt="Vishnu Gamini at the Santa Monica Pier" fetchpriority="high" />
+      </div>
+
+      <section id="work" class="section" aria-labelledby="work-heading">
+        <h2 id="work-heading">Selected Work</h2>
+
+        <article class="feature">
+          <div class="feature-main">
+            <h3 id="brain">Brain</h3>
+            <p class="feature-subtitle">Shared memory for AI tools</p>
+            <p class="feature-description">I built Brain so AI tools can read and update the same project notes through the Model Context Protocol (MCP).</p>
+            <a class="button" href="https://brain-102804184252.us-west1.run.app/">Open Brain <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="feature-details">
+            <dl>
+              <dt>Project search</dt>
+              <dd>Search notes within a project session using Pinecone.</dd>
+              <dt>Source citations</dt>
+              <dd>Open the exact note passage cited in an Ask Brain answer.</dd>
+              <dt>Access controls</dt>
+              <dd>Set read or edit permissions for each connected tool through OAuth.</dd>
+            </dl>
+            <p class="tech">FastAPI · React · Supabase · Pinecone · Cloud Run</p>
+          </div>
+        </article>
+
+        <div class="projects">
+          <article class="project project-wide">
+            <h3>Multi-Agent RAG System</h3>
+            <p>Built a LangGraph supervisor that routes work to research, code, and summary agents. Answers cite retrieved documentation, and the interface streams execution events and model routing.</p>
+            <a href="https://github.com/vishnugamini/multi-agent-rag-assistant" aria-label="Multi-Agent RAG System on GitHub">GitHub <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project">
+            <h3>Local LLM Agent</h3>
+            <p>Built a Python agent that inspects errors, revises its approach, and retries coding and file tasks. Added specialized agents and a Flask interface.</p>
+            <a href="https://github.com/vishnugamini/LocalLLMAgent" aria-label="Local LLM Agent on GitHub">GitHub <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project">
+            <h3>AI Interview Coach</h3>
+            <p>Built an interview practice app that uses a résumé and job description to plan coding questions and evaluate responses.</p>
+            <a href="https://github.com/vishnugamini/AI-Coding-Interview-Coach" aria-label="AI Interview Coach on GitHub">GitHub <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project">
+            <h3>Archaic Text Engine</h3>
+            <p>Built a decoder-only Transformer for dialogue generation, with an interface for setting the starting context and generation length.</p>
+            <a href="https://github.com/vishnugamini/WhimsyTextGenerator" aria-label="Archaic Text Engine on GitHub">GitHub <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project">
+            <h3>Secure One-Time Chat</h3>
+            <p>Built password-protected chat rooms with WebSocket message delivery. The server does not store messages.</p>
+            <a href="https://github.com/vishnugamini/SecureChat" aria-label="Secure One-Time Chat on GitHub">GitHub <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section" aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Experience</h2>
+        <div class="records">
+          <article class="record">
+            <p class="period">Apr–Sep 2026</p>
+            <div>
+              <h3>USC Interaction Lab</h3>
+              <p class="role">Graduate Research Assistant</p>
+              <p>Processed 50,000+ psychotherapy dialogue samples and fine-tuned Gemma 3 with LoRA. Served inference with vLLM and integrated it with the Blossom robot through ROS. Improved a BERT entrainment model’s mean cosine-similarity margin by 18% over baseline.</p>
+            </div>
+          </article>
+          <article class="record">
+            <p class="period">Mar–May 2025</p>
+            <div>
+              <h3>VersaQuant</h3>
+              <p class="role">Software Development Engineer Intern</p>
+              <p>Built a warehouse safety monitoring service with FastAPI and OpenCV. A VGG16 and ResNet50 ensemble reached 92% accuracy on unseen data. Built a React dashboard for predictions, confidence scores, and model drift.</p>
+            </div>
+          </article>
+          <article class="record">
+            <p class="period">Aug 2023–Jan 2024</p>
+            <div>
+              <h3>eAppSys</h3>
+              <p class="role">Machine Learning Intern</p>
+              <p>Built and deployed a LangChain and Pinecone retrieval system that reduced manual query escalation by 20%. Automated document ingestion and indexing with Scrapy and Airflow.</p>
+            </div>
+          </article>
+          <article class="record">
+            <p class="period">Mar–Jul 2023</p>
+            <div>
+              <h3>VIT-AP University</h3>
+              <p class="role">Undergraduate Research Assistant</p>
+              <p>Added channel and spatial attention to U-Net for skin lesion segmentation, improving Dice score by 12% over baseline. Co-authored research accepted by <em>Multimedia Tools and Applications</em>.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="section" aria-labelledby="education-heading">
+        <h2 id="education-heading">Education</h2>
+        <div class="records">
+          <article class="record">
+            <p class="period">2025–2027 (expected)</p>
+            <div>
+              <h3>University of Southern California</h3>
+              <p class="role">M.S. Computer Science</p>
+            </div>
+          </article>
+          <article class="record">
+            <p class="period">2021–2025</p>
+            <div>
+              <h3>Vellore Institute of Technology, Amaravati</h3>
+              <p class="role">B.Tech. Computer Science</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="wrap footer-inner">
+        <div>
+          <h2>Contact</h2>
+          <a href="mailto:vgamini.work@gmail.com">vgamini.work@gmail.com</a>
+        </div>
+        <div class="links">
+          <a href="https://github.com/vishnugamini">GitHub</a>
+          <a href="https://www.linkedin.com/in/vishnu-gamini/">LinkedIn</a>
+          <a href="https://leetcode.com/u/user2212w/">LeetCode</a>
+          <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
