@@ -60,14 +60,16 @@
           </div>
           <div class="feature-details">
             <dl>
-              <dt>App permissions</dt>
-              <dd>Connect apps through the Model Context Protocol (MCP) and grant read or edit access through OAuth.</dd>
-              <dt>Search by meaning</dt>
-              <dd>Find relevant notes within a project session even when your query uses different words.</dd>
-              <dt>Trace answers to your notes</dt>
-              <dd>Ask Brain answers from saved notes and links directly to the passages it used.</dd>
+              <dt>Agent workflows</dt>
+              <dd>Ask Brain uses the OpenAI Responses API to chain tool calls. It can find notes, cite the exact passages it used, and save a follow-up checklist when asked.</dd>
+              <dt>Indexing and retrieval</dt>
+              <dd>Brain splits notes into overlapping passages and indexes their embeddings in a per-user Pinecone namespace. Searches can stay within one project session, and matches are checked against the current note in PostgreSQL.</dd>
+              <dt>MCP and OAuth</dt>
+              <dd>A remote MCP server lets clients like ChatGPT and Claude search notes and open project sessions. OAuth connections are read-only by default. Users can grant write access to individual apps.</dd>
+              <dt>PostgreSQL storage</dt>
+              <dd>Supabase PostgreSQL stores notes and sessions with row-level security. Version checks prevent stale edits from overwriting newer ones, and idempotency keys prevent retries from applying the same edit twice.</dd>
             </dl>
-            <p class="tech">FastAPI · React · Supabase · Pinecone · Cloud Run</p>
+            <p class="tech">FastAPI · React/TypeScript · Google Cloud Run</p>
           </div>
         </article>
 
